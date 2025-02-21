@@ -2,189 +2,192 @@
 <html>
     <head>
         <title>Citing code</title>
-        <!-- remixed from https://www.w3schools.com/howto/howto_js_tabs.asp -->
+        <!-- remixed from https://www.w3schools.com/howto/howto_js_tabs.asp and https://www.w3schools.com/howto/howto_js_slideshow.asp-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-body {font-family: Arial;}
+          body {font-family: Arial;}
 
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
+          /* Style of the tab */
+          .tab {
+          overflow: hidden;
+          border: 1px solid #6a0606;
+          background-color: #d17dd3;
+          }
 
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
+          /* Style  the buttons inside the tab */
+          .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+          }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
+          /* Changes the hover colour on the tabs */
+          .tab button:hover {
+          background-color: #cec0e4;
+          }
 
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
+          /* changes the colour of tab when its selected*/
+          .tab button.active {
+          background-color: #b38eee;
+          }
 
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
+          /* Style the tab content */
+          .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #6a0606;
+          border-top: none;
+          background-color:#b6ade4 /*added so that the background color of the tab is a different colour than that of the body*/
+          }
 
-* {box-sizing:border-box}
+          * {box-sizing:border-box}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+          /* Slideshow code added in with the tabs code style*/
+          .slideshow-container {
+          max-width: 1000px; 
+          position: relative;
+          margin: auto;
+          }
 
-/* Hide the images by default */
-.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 {
-  display: none;
-}
+          /* Hides the images by default */
+          .mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5 { /*modified for multiple slideshows, the same one wouldn't work for all of them*/
+          display: none;
+          }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
+          /* Next & previous buttons */
+          .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: rgb(224, 194, 255); /*colour modified*/
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+          /* Position of the "next button",so it's to the right */
+          .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+          }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
+          /* On hover, add a background color with a little bit see-through on the arrows in the slideshow*/
+          .prev:hover, .next:hover {
+          background-color: rgba(40, 21, 58, 0.8); /*modified colour*/
+          }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+          /* Caption text at the bottom of the image*/
+          .text {
+          color: #3b085b; /*colour modified*/
+          font-size: 15px;
+          padding: 8px 12px;
+          position: absolute;
+          bottom: 8px;
+          width: 100%;
+          text-align: center;
+          }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+          /* Number text (1/3 etc), to display how many images there are in that slideshow*/
+          .numbertext {
+          color: #3b085b; /*Colour modified*/
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+          }
 
-/* The dots/bullets/indicators */
-.dot1, .dot2, .dot3, .dot4, .dot5 {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+          /* The dots/bullets/indicators */
+          .dot1, .dot2, .dot3, .dot4, .dot5 { /*modified to display on all slideshows*/
+          cursor: pointer;
+          height: 15px;
+          width: 15px;
+          margin: 0 2px;
+          background-color: #8749d4; /*colour modified*/
+          border-radius: 50%;
+          display: inline-block;
+          transition: background-color 0.6s ease;
+          }
 
-.active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover {
-  background-color: #717171;
-}
+          .active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover { /*modified for multiple slideshows*/
+          background-color: #2f0b5b; /*colour modified*/
+          }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+          /* Fading animation */
+          .fade {
+          animation-name: fade;
+          animation-duration: 1.5s;
+          }
 
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
+          @keyframes fade {
+          from {opacity: .4}
+          to {opacity: 1}
+          }
         </style>
-        <script>
-let slideIndex = 1;
-let cityIndex = 1;
+        <script> /*slides script modified to hold butterfly names as desired*/
+          let slideIndex = 1;
+          let cityIndex = 1;
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+          // Next/previous controls
+          function plusSlides(n) {
+          showSlides(slideIndex += n);
+          }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+          // Thumbnail image controls
+          function currentSlide(n) {
+          showSlides(slideIndex = n);
+          }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides" + cityIndex);
-  let dots = document.getElementsByClassName("dot" + cityIndex);
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+          function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides" + cityIndex);
+          let dots = document.getElementsByClassName("dot" + cityIndex);
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          }
 
-let cityNames = ["", "MonarchButterfly", "AmericanLady", "RedSpottedPurple", "HackberryEmperor", "Viceroy"];
+          // code for multiple slideshows
+          let cityNames = ["", "MonarchButterfly", "AmericanLady", "RedSpottedPurple", "HackberryEmperor", "Viceroy"];
 
-function openCity(evt, c) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
-    for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablinks");
-    for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
-    document.getElementById(cityNames[c]).style.display = "block";
-    evt.currentTarget.className += " active";
+          function openCity(evt, c) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityNames[c]).style.display = "block";
+            evt.currentTarget.className += " active";
 
-    cityIndex = c;
-    slideIndex = 1;
-    showSlides(slideIndex);
-}
+          cityIndex = c;
+          slideIndex = 1;
+          showSlides(slideIndex);
+          } 
         </script>
     </head>
-    <body>
-        <h1>Butterflies</h1>
+    <body style="background-color:#E7DDFF;"> 
+      <!-- changed the colour of the background of the body -->
+        <h1 >Butterflies</h1>
 
         <div class="tab">
             <button class="tablinks" onclick="openCity(event, 1)">Monarch Butterfly</button>
@@ -196,29 +199,37 @@ function openCity(evt, c) {
 
         <div id="MonarchButterfly" class="tabcontent">
             <h3>The Monarch Butterfly</h3>
-            <p>Feeds on -.</p>
+            <p>Can be found in North America, Central America, South America, Australia, the Pacific Islands, Africa and in parts of Europe.</p>
 
             <!-- Slideshow container -->
             <div class="slideshow-container">
-
+             
                 <!-- Full-width images with number and caption text -->
+                <!-- added images -->
                 <div class="mySlides1 fade">
-                    <div class="numbertext">1 / 3</div>
+                    <div class="numbertext">1 / 4</div>
                     <img src="mb-1.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
+                    <div class="text">Monarch Butterfly</div>
                 </div>
             
                 <div class="mySlides1 fade">
-                    <div class="numbertext">2 / 3</div>
+                    <div class="numbertext">2 / 4</div>
                     <img src="mb-2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
+                    <div class="text">Monarch Butterfly</div>
                 </div>
             
                 <div class="mySlides1 fade">
-                    <div class="numbertext">3 / 3</div>
+                    <div class="numbertext">3 / 4</div>
                     <img src="mb-3.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text">Monarch Butterfly</div>
                 </div>
+
+                <!-- modified to have 4 images and display out of 4 for the numbers -->
+                <div class="mySlides1 fade"> 
+                  <div class="numbertext">4 / 4</div>
+                  <img src="mb-4.jpg" style="width:100%">
+                  <div class="text">Monarch Butterfly</div>
+              </div>
             
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -231,33 +242,35 @@ function openCity(evt, c) {
                 <span class="dot1" onclick="currentSlide(1)"></span>
                 <span class="dot1" onclick="currentSlide(2)"></span>
                 <span class="dot1" onclick="currentSlide(3)"></span>
+                <span class="dot1" onclick="currentSlide(4)"></span>
             </div>
         </div>
 
         <div id="AmericanLady" class="tabcontent">
             <h3>The American Lady</h3>
-            <p>Feeds on -.</p> 
+            <p>Can be found in North America and South America.</p> 
 
             <!-- Slideshow container -->
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
-                <div class="mySlides2 fade">
+                <!-- added images -->
+                <div class="mySlides2 fade"> 
                     <div class="numbertext">1 / 3</div>
                     <img src="al-1.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
+                    <div class="text">American Lady</div>
                 </div>
             
                 <div class="mySlides2 fade">
                     <div class="numbertext">2 / 3</div>
                     <img src="al-2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
+                    <div class="text">American Lady</div>
                 </div>
             
                 <div class="mySlides2 fade">
                     <div class="numbertext">3 / 3</div>
                     <img src="al-3.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text">American Lady</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -276,29 +289,35 @@ function openCity(evt, c) {
 
         <div id="RedSpottedPurple" class="tabcontent">
             <h3>The Red Spottted-Purple</h3>
-            <p>Feeds on -.</p>
+            <p>Can be found in Canada and the Eastern parts of the United states .</p>
         
             <!-- Slideshow container -->
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides3 fade">
-                    <div class="numbertext">1 / 3</div>
+                    <div class="numbertext">1 / 4</div>
                     <img src="rsp-1.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
+                    <div class="text">Red Spotted-Purple butterfly</div>
                 </div>
             
                 <div class="mySlides3 fade">
-                    <div class="numbertext">2 / 3</div>
+                    <div class="numbertext">2 / 4</div>
                     <img src="rsp-2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
+                    <div class="text">Red Spotted-Purple butterfly</div>
                 </div>
             
                 <div class="mySlides3 fade">
-                    <div class="numbertext">3 / 3</div>
+                    <div class="numbertext">3 / 4</div>
                     <img src="rsp-3.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text">Red Spotted-Purple butterfly</div>
                 </div>
+
+                <div class="mySlides3 fade">
+                  <div class="numbertext">4 / 4</div>
+                  <img src="rsp-4.jpg" style="width:100%">
+                  <div class="text">Red Spotted-Purple butterfly</div>
+              </div>
             
                 <!-- Next and previous buttons -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -311,12 +330,13 @@ function openCity(evt, c) {
                 <span class="dot3" onclick="currentSlide(1)"></span>
                 <span class="dot3" onclick="currentSlide(2)"></span>
                 <span class="dot3" onclick="currentSlide(3)"></span>
+                <span class="dot3" onclick="currentSlide(3)"></span>
             </div>
         </div>
 
         <div id="HackberryEmperor" class="tabcontent">
             <h3>The Hackberry Emperor</h3>
-            <p>Feeds on -.</p>
+            <p>Can be found in North America.</p>
         
             <!-- Slideshow container -->
             <div class="slideshow-container">
@@ -325,25 +345,25 @@ function openCity(evt, c) {
                 <div class="mySlides4 fade">
                     <div class="numbertext">1 / 4</div>
                     <img src="he-1.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
+                    <div class="text">Hackberry Emperor Butterfly</div>
                 </div>
             
                 <div class="mySlides4 fade">
                     <div class="numbertext">2 / 4</div>
                     <img src="he-2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
+                    <div class="text">Hackberry Emperor Butterfly</div>
                 </div>
             
                 <div class="mySlides4 fade">
                     <div class="numbertext">3 / 4</div>
                     <img src="he-3.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text">Hackberry Emperor Butterfly</div>
                 </div>
                 
                 <div class="mySlides4 fade">
                     <div class="numbertext">4 / 4</div>
                     <img src="he-4.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text">Hackberry Emperor Butterfly</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -363,28 +383,29 @@ function openCity(evt, c) {
 
         <div id="Viceroy" class="tabcontent">
             <h3>The Viceroy</h3>
-            <p>Feeds on -.</p>
-        
+            <p>Can be found in North America, Taiwan, China and Brazil.</p>
+
             <!-- Slideshow container -->
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
+                <!-- modified to have 5 images in the slideshow -->
                 <div class="mySlides5 fade">
                     <div class="numbertext">1 / 5</div>
                     <img src="v-1.jpg" style="width:100%">
-                    <div class="text">Caption Text</div>
+                    <div class="text">Viceroy Butterfly</div>
                 </div>
             
                 <div class="mySlides5 fade">
                     <div class="numbertext">2 / 5</div>
                     <img src="v-2.jpg" style="width:100%">
-                    <div class="text">Caption Two</div>
+                    <div class="text">Viceroy Butterfly</div>
                 </div>
             
                 <div class="mySlides5 fade">
                     <div class="numbertext">3 / 5</div>
                     <img src="v-3.jpg" style="width:100%">
-                    <div class="text">Caption Three</div>
+                    <div class="text">Viceroy Butterfly</div>
                 </div>
                 
                 <div class="mySlides5 fade">
@@ -414,8 +435,6 @@ function openCity(evt, c) {
                 <span class="dot5" onclick="currentSlide(5)"></span>
             </div>
         </div>
-
-
 <!-- end of remix for https://www.w3schools.com/howto/howto_js_tabs.asp -->
    
     </body>
