@@ -1,5 +1,6 @@
 let robotModel;
 let robotVideo;
+let isLooping = false;
 
 function preload() {
   robotModel = loadModel('robot.mtl.20.obj', true);
@@ -32,5 +33,16 @@ function draw(){
 // Set the video's size and play it.
 function handleVideo() {
   robotVideo.size(200, 400);
-  robotVideo.autoplay();
+}
+
+function mousePressed() {
+  if (isLooping === true) {
+    // If the beat is looping, stop it.
+    robotVideo.stop();
+    isLooping = false;
+  } else {
+    // If the beat is stopped, loop it.
+    robotVideo.loop();
+    isLooping = true;
+  }
 }
