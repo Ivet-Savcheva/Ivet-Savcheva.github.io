@@ -1,4 +1,5 @@
 let robotModel;
+let robotVideo;
 
 function preload() {
   robotModel = loadModel('robot.mtl.20.obj', true);
@@ -8,10 +9,8 @@ function setup(){
     createCanvas(720, 480, WEBGL);
     describe('A model of a robot');
 
-    //createSpan('x speed');
-    //speedXSlider = createSlider(1, 10, 1, 1);
-    //createSpan('y speed');
-    //speedYSlider = createSlider(1, 10, 1, 1);
+    // Call handleVideo() once the video loads.
+    robotVideo = createVideo('robot.mp4', handleVideo);
 }
 
 function draw(){
@@ -28,4 +27,10 @@ function draw(){
     shininess(100);
     rotateY(frameCount * 0.01);
     model(robotModel);
+}
+
+// Set the video's size and play it.
+function handleVideo() {
+  robotVideo.size(200, 400);
+  robotVideo.autoplay();
 }
