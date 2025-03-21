@@ -1,7 +1,7 @@
 let robotModel;
 
 function preload() {
-  robotModel = loadModel('robot.obj', true);
+  robotModel = loadModel('robot.mtl.20.obj', true);
 }
 
 function setup(){
@@ -29,5 +29,5 @@ function draw(){
    
     // This adds color to the model according to the angle of the surface
     normalMaterial();
-    model(teapotModel);
+    model(robotModel);
 }
