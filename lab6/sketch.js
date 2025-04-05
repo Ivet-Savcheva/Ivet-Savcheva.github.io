@@ -41,7 +41,7 @@ function setup(){
     divElement.mouseOut(startMove);
 
     speedX = getItem('speedx');
-    if (speedX === undefined) {
+    if (speedX == null) {
         speedX = 1;
         storeItem('speedx', speedX);
         console.log("speedx undefined.");
@@ -50,7 +50,7 @@ function setup(){
         console.log("speedx = " + speedX);
     }
     speedY = getItem('speedy');
-    if (speedY === undefined) {
+    if (speedY == null) {
         speedY = 1;
         storeItem('speedy', speedY);
         console.log("speedy undefined.");
