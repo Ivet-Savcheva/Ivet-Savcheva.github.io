@@ -158,7 +158,7 @@ function setup(){
 }
 
 function draw(){
-    background ('pink');
+    background ('cornflowerBlue');
 
     // Draw the image.
     //image(cityImages[cityIndex], 17, 17);
@@ -166,12 +166,12 @@ function draw(){
     // Create the second camera.
     // Place it at the top-left.
     // Point it at the origin.
-    cam1 = createCamera();
-    cam1.setPosition(400, -400, 800);
-    cam1.lookAt(0, 0, 0);
+    //cam1 = createCamera();
+    //cam1.setPosition(400, -400, 800);
+    //cam1.lookAt(0, 0, 0);
 
     // Set the current camera to cam1.
-    setCamera(cam1);
+    //setCamera(cam1);
  
     // Click and drag to look around the shape
     orbitControl();
