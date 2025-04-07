@@ -167,7 +167,7 @@ function draw(){
     // Place it at the top-left.
     // Point it at the origin.
     cam1 = createCamera();
-    cam1.setPosition(400, -400, 800);
+    cam1.setPosition(-400, 400, -800);
     cam1.lookAt(0, 0, 0);
 
     // Set the current camera to cam1.
