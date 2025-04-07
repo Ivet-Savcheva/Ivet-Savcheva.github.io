@@ -70,15 +70,20 @@ function openCity(evt, c) {
 }
 
 function preload() {
-    robotModel = loadModel('robot.obj', true);
-    spaceshipModel = loadModel('spaceshipblend.obj', true);
-    skullModel = loadModel('skullcb.obj', true);
-    astronautModel = loadModel('astronautc.obj', true);
+    robotModel = loadModel('robot.obj', true, handleModel);
+    spaceshipModel = loadModel('spaceshipblend.obj', true, handleModel);
+    skullModel = loadModel('skullcb.obj', true, handleModel);
+    astronautModel = loadModel('astronautc.obj', true, handleModel);
 
     cityModels[1] = robotModel;
     cityModels[2] = spaceshipModel;
     cityModels[3] = skullModel;
     cityModels[4] = astronautModel;
+}
+
+function handleModel(data) {
+  data.flipU();
+  data.flipV();
 }
 
 function setup(){
@@ -167,7 +172,7 @@ function draw(){
     // Place it at the top-left.
     // Point it at the origin.
     cam1 = createCamera();
-    cam1.setPosition(-400, 400, -800);
+    cam1.setPosition(400, -400, 800);
     cam1.lookAt(0, 0, 0);
 
     // Set the current camera to cam1.
