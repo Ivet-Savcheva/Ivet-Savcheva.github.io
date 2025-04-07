@@ -1,6 +1,6 @@
 # Blender 4.3.2
 # www.blender.org
-mtllib SkullCB.mtl
+mtllib skullcb.mtl
 o Clay
 v 0.121175 -0.102826 -0.236762
 v 0.120664 -0.102294 -0.248260

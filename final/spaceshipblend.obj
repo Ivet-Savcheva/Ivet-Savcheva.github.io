@@ -1,6 +1,6 @@
 # Blender 4.3.2
 # www.blender.org
-mtllib Spaceshipblend.mtl
+mtllib spaceshipblend.mtl
 o Cylinder
 v -0.002270 3.946901 -5.680883
 v 0.000000 4.532703 1.907069

@@ -1,6 +1,6 @@
 # Blender 4.3.2
 # www.blender.org
-mtllib robot.mtl.20.mtl
+mtllib robot.mtl
 o mesh
 v -0.015960 0.263401 0.021304
 v -0.015329 0.262830 0.021221

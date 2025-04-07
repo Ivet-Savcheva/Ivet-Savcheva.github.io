@@ -1,6 +1,6 @@
 # Blender 4.3.2
 # www.blender.org
-mtllib AstronautC.mtl
+mtllib astronautc.mtl
 o Clay
 v 0.159516 -0.082011 -0.031791
 v 0.159462 -0.081604 -0.026140
