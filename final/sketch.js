@@ -182,7 +182,7 @@ function draw(){
     noStroke();
     specularMaterial(50);
     shininess(100);
-    rotateX(HALF_PI);
+    rotateX(PI);
     rotateY(frameCount * 0.01);
     model(cityModels[cityIndex]);
 }
