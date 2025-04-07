@@ -6,13 +6,41 @@
         <!-- remixed from https://www.w3schools.com/howto/howto_js_tabs.asp and https://www.w3schools.com/howto/howto_js_slideshow.asp -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            body {font-family: Arial;}
+            /*body {
+                font-family: Arial;
+            }*/
+            body, html {
+                height: 100%;
+                margin: 0;
+                font: 400 15px/1.8 "Lato", sans-serif;
+                color: #777;
+            }
+
+            h1, h3 {
+                color: #000;
+            }
+
+            p {
+                color: #000;
+                font-weight: bold;
+            }
+
+            .bgimg-1 {
+                position: relative;
+                /*opacity: 0.65;*/
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url("background.png");
+                min-height: 100%;
+            }
 
             /* Style of the tab */
             .tab {
                 overflow: hidden;
-                border: 1px solid #6a0606;
-                background-color: #d17dd3;
+                border: 1px solid #06033e;
+                /*background-color: #B0E0E6;*/
             }
 
             /* Style  the buttons inside the tab */
@@ -29,12 +57,12 @@
 
             /* Changes the hover colour on the tabs */
             .tab button:hover {
-                background-color: #cec0e4;
+                background-color: #808fa2;
               }
 
             /* changes the colour of tab when its selected*/
             .tab button.active {
-                background-color: #b38eee;
+                background-color: #B0C4DE;
             }
 
             /* Style the tab content */
@@ -43,7 +71,7 @@
                 padding: 6px 12px;
                 border: 1px solid #6a0606;
                 border-top: none;
-                background-color:#b6ade4 /*added so that the background color of the tab is a different colour than that of the body*/
+                /*background-color:#E0FFFF*/ /*added so that the background color of the tab is a different colour than that of the body*/
             }
 
             * {box-sizing:border-box}
@@ -68,7 +96,7 @@
                 width: auto;
                 margin-top: -22px;
                 padding: 16px;
-                color: rgb(224, 194, 255); /*colour modified*/
+                color: #2d3239; /*colour modified*/
                 font-weight: bold;
                 font-size: 18px;
                 transition: 0.6s ease;
@@ -84,13 +112,14 @@
 
             /* On hover, add a background color with a little bit see-through on the arrows in the slideshow*/
             .prev:hover, .next:hover {
-                background-color: rgba(40, 21, 58, 0.8); /*modified colour*/
+                background-color: #B0C4DE; /*modified colour*/
             }
 
             /* Caption text at the bottom of the image*/
             .text {
-                color: #3b085b; /*colour modified*/
+                color: #fff; /*colour modified*/
                 font-size: 15px;
+                font-weight: bold;
                 padding: 8px 12px;
                 position: absolute;
                 bottom: 8px;
@@ -102,6 +131,7 @@
             .numbertext {
                 color: #3b085b; /*Colour modified*/
                 font-size: 12px;
+                font-weight: bold;
                 padding: 8px 12px;
                 position: absolute;
                 top: 0;
@@ -135,7 +165,8 @@
             }
         </style>
     </head>
-    <body style="margin: 0px;">
+    <body><div class="bgimg-1">
+
         <!-- changed the colour of the background of the body -->
         <h1>3D Portfolio</h1>
 
@@ -148,7 +179,18 @@
 
         <div id="robot" class="tabcontent" style="display: block;">
             <h3>Robot</h3>
-            <p>Robot description.</p>
+            <p>
+                The image below image shows my robot model rendered in Substance Painter after importing the final version. 
+            </p>
+            <p>
+                The model was created for an assignment where we had to design a physical “puppet” capable of posing in a T-position that will then be imported into Mixamo for animation. My robot was first constructed physically using cardboard and hot glue — materials chosen for their accessibility and the raw, handmade aesthetic they bring to the piece. There’s a playful contrast in using such fragile materials to build a form typically associated with strength and technology. 
+            </p>
+            <p>
+                Once assembled, I scanned the robot using LiDAR, imported the scan into Blender, and reduced the polygon count to make it suitable for animation. The final model was exported as an OBJ file. 
+            </p>
+            <p>
+                Scroll to the last slide for an interactable 3D
+            </p>
 
             <!-- Slideshow container -->
             <div class="slideshow-container">
@@ -284,5 +326,5 @@
         <div id="hiddendiv" style="width: 1px; height: 1px; overflow: hidden;"></div>
 
         <script src="sketch.js"></script>
-    </body>
+    </div></body>
 </html>
