@@ -15,7 +15,7 @@ let cityIndex = 1;
 
 // code for multiple slideshows
 let cityNames = ['', 'robot', 'spaceship', 'skull', 'astronaut'];
-let cityImages = [null, null, null, null, null];
+/*let cityImages = [null, null, null, null, null];*/
 let cityModels = [null, null, null, null, null];
 
 // Next/previous controls
@@ -88,7 +88,7 @@ function setup(){
     describe('A 3D Portfolio');
 
     // Create a p5.Image object.
-    robotImage = createImage(66, 66);
+    /*robotImage = createImage(66, 66);
 
     // Load the image's pixels into memory.
     robotImage.loadPixels();
@@ -154,14 +154,14 @@ function setup(){
     cityImages[1] = robotImage;
     cityImages[2] = spaceshipImage;
     cityImages[3] = skullImage;
-    cityImages[4] = astronautImage;
+    cityImages[4] = astronautImage;*/
 }
 
 function draw(){
     background ('cornflowerBlue');
 
     // Draw the image.
-    //image(cityImages[cityIndex], 17, 17);
+    /*image(cityImages[cityIndex], 17, 17);*/
 
     // Create the second camera.
     // Place it at the top-left.

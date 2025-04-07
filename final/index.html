@@ -1,14 +1,11 @@
 <!DOCTYPE html>
     <head>
         <meta charset="UTF-8">
-        <title>Final</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Final - 3D Portfolio</title>
         <script src="p5.min.js"></script>
-        <!-- remixed from https://www.w3schools.com/howto/howto_js_tabs.asp and https://www.w3schools.com/howto/howto_js_slideshow.asp -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <style>
-            /*body {
-                font-family: Arial;
-            }*/
             body, html {
                 height: 100%;
                 margin: 0;
@@ -69,7 +66,7 @@
             .tabcontent {
                 display: none;
                 padding: 6px 12px;
-                border: 1px solid #6a0606;
+                border: 1px solid #2d3239;
                 border-top: none;
                 /*background-color:#E0FFFF*/ /*added so that the background color of the tab is a different colour than that of the body*/
             }
@@ -129,7 +126,7 @@
 
             /* Number text (1/3 etc), to display how many images there are in that slideshow*/
             .numbertext {
-                color: #3b085b; /*Colour modified*/
+                color: #2d3239; /*Colour modified*/
                 font-size: 12px;
                 font-weight: bold;
                 padding: 8px 12px;
@@ -143,14 +140,14 @@
                 height: 15px;
                 width: 15px;
                 margin: 0 2px;
-                background-color: #8749d4; /*colour modified*/
+                background-color: #B0C4DE; /*colour modified*/
                 border-radius: 50%;
                 display: inline-block;
                 transition: background-color 0.6s ease;
             }
 
             .active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover { /*modified for multiple slideshows*/
-                background-color: #2f0b5b; /*colour modified*/
+                background-color: #57616e; /*colour modified*/
             }
 
             /* Fading animation */
@@ -166,8 +163,6 @@
         </style>
     </head>
     <body><div class="bgimg-1">
-
-        <!-- changed the colour of the background of the body -->
         <h1>3D Portfolio</h1>
 
         <div class="tab">
@@ -189,7 +184,7 @@
                 Once assembled, I scanned the robot using LiDAR, imported the scan into Blender, and reduced the polygon count to make it suitable for animation. The final model was exported as an OBJ file. 
             </p>
             <p>
-                Scroll to the last slide for an interactable 3D
+                Scroll to the last slide for an interactable 3D model.
             </p>
 
             <!-- Slideshow container -->
@@ -198,15 +193,21 @@
                 <!-- Full-width images with number and caption text -->
                 <!-- added images -->
                 <div class="mySlides1 fade">
-                    <div class="numbertext">1 / 2</div>
+                    <div class="numbertext">1 / 3</div>
                     <img src="robot.jpg" style="width:100%">
-                    <div class="text">Monarch Butterfly</div>
+                    <div class="text">Rendered in Substance Painter</div>
+                </div>
+
+                <div class="mySlides1 fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="robot2.jpg" style="width:100%">
+                    <div class="text">Alternate Rendered in Substance Painter</div>
                 </div>
             
                 <div class="mySlides1 fade">
-                    <div class="numbertext">2 / 2</div>
+                    <div class="numbertext">3 / 3</div>
                     <div id="robotdiv" style="width: auto; height: 600px; align-items: center; display: flex; justify-content: center;"></div>
-                    <div class="text">Monarch Butterfly</div>
+                    <div class="text">3D model</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -219,12 +220,15 @@
             <div style="text-align:center">
                 <span class="dot1" onclick="currentSlide(1)"></span>
                 <span class="dot1" onclick="currentSlide(2)"></span>
+                <span class="dot1" onclick="currentSlide(3)"></span>
             </div>
         </div>
 
         <div id="spaceship" class="tabcontent">
             <h3>Spaceship</h3>
-            <p>Spaceship description.</p> 
+            <p>The image below shows a spaceship modeled in Blender, designed specifically to be textured in Substance Painter.</p>
+            <p>The model was quickly sketched and recreated in Blender, and it is conceptually linked to the previous robot model as part of an assignment.</p>
+            <p>Scroll to the last slide for an interactable 3D model.</p>
 
             <!-- Slideshow container -->
             <div class="slideshow-container">
@@ -234,13 +238,13 @@
                 <div class="mySlides2 fade"> 
                     <div class="numbertext">1 / 2</div>
                     <img src="spaceshipblend.jpg" style="width:100%">
-                    <div class="text">American Lady</div>
+                    <div class="text">Render in Substance Painter</div>
                 </div>
             
                 <div class="mySlides2 fade">
                     <div class="numbertext">2 / 3</div>
                     <div id="spaceshipdiv" style="width: auto; height: 600px; align-items: center; display: flex; justify-content: center;"></div>
-                    <div class="text">American Lady</div>
+                    <div class="text">3D model</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -258,22 +262,36 @@
 
         <div id="skull" class="tabcontent">
             <h3>Skull</h3>
-            <p>Skull description.</p>
+            <p>The image below shows a VR sculpture created in Masterpiece Studio. It was exported as an FBX, then imported into Blender to be decimated and exported again as an OBJ file. </p>
+            <p>Surreal and strange themes - my own take on memento mori - have long fascinated me. These meditations on mortality, memory, and the absurd often find their way into my drawings, paintings, and sculptures. Working in VR has opened a new dimension in my practice, allowing me to bring these concepts into immersive, spatial forms. The immediacy and freedom of virtual sculpting let me explore ideas more intuitively, translating raw thought into shape without the limitations of physical materials. This piece reflects my ongoing interest in the intersection of life, death, and the dreamlike — a space where discomfort and curiosity coexist. </p>
+            <p>Scroll to the last slide for an interactable 3D model.</p>
         
             <!-- Slideshow container -->
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides3 fade">
-                    <div class="numbertext">1 / 2</div>
+                    <div class="numbertext">1 / 4</div>
                     <img src="skullcb.jpg" style="width:100%">
-                    <div class="text">Red Spotted-Purple butterfly</div>
+                    <div class="text">Masterpiece creator screenshot</div>
+                </div>
+
+                <div class="mySlides3 fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="skullp2.jpg" style="width:100%">
+                    <div class="text">Proccess screenshot</div>
+                </div>
+
+                <div class="mySlides3 fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="skullp3.jpg" style="width:100%">
+                    <div class="text">Proccess screenshot</div>
                 </div>
             
                 <div class="mySlides3 fade">
-                    <div class="numbertext">2 / 2</div>
+                    <div class="numbertext">4 / 4</div>
                     <div id="skulldiv" style="width: auto; height: 600px; align-items: center; display: flex; justify-content: center;"></div>
-                    <div class="text">Red Spotted-Purple butterfly</div>
+                    <div class="text">3D model</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -286,27 +304,42 @@
             <div style="text-align:center">
                 <span class="dot3" onclick="currentSlide(1)"></span>
                 <span class="dot3" onclick="currentSlide(2)"></span>
+                <span class="dot3" onclick="currentSlide(3)"></span>
+                <span class="dot3" onclick="currentSlide(4)"></span>
             </div>
         </div>
 
         <div id="astronaut" class="tabcontent">
             <h3>Astronaut</h3>
-            <p>Astronaut description.</p>
-        
+            <p>Another VR sculpture created in Masterpiece Creator. This piece was part of a final project for a course. The astronaut was sculpted in VR, exported as an FBX file, and then imported into Adobe Aero for use in an XR video.</p>
+            <p>Scroll to the last slide for an interactable 3D model.</p>
+
             <!-- Slideshow container -->
             <div class="slideshow-container">
 
                 <!-- Full-width images with number and caption text -->
                 <div class="mySlides4 fade">
-                    <div class="numbertext">1 / 2</div>
+                    <div class="numbertext">1 / 4</div>
                     <img src="astronautc.jpg" style="width:100%">
-                    <div class="text">Hackberry Emperor Butterfly</div>
+                    <div class="text">Masterpiece creator screenshot</div>
+                </div>
+
+                <div class="mySlides4 fade">
+                    <div class="numbertext">2 / 4</div>
+                    <img src="astronautp1.jpg" style="width:100%">
+                    <div class="text">Proccess screenshot</div>
+                </div>
+
+                <div class="mySlides4 fade">
+                    <div class="numbertext">3 / 4</div>
+                    <img src="astronautp2.jpg" style="width:100%">
+                    <div class="text">Proccess screenshot</div>
                 </div>
             
                 <div class="mySlides4 fade">
-                    <div class="numbertext">2 / 2</div>
+                    <div class="numbertext">4 / 4</div>
                     <div id="astronautdiv" style="width: auto; height: 600px; align-items: center; display: flex; justify-content: center;"></div>
-                    <div class="text">Hackberry Emperor Butterfly</div>
+                    <div class="text">3D model</div>
                 </div>
             
                 <!-- Next and previous buttons -->
@@ -319,6 +352,8 @@
             <div style="text-align:center">
                 <span class="dot4" onclick="currentSlide(1)"></span>
                 <span class="dot4" onclick="currentSlide(2)"></span>
+                <span class="dot4" onclick="currentSlide(3)"></span>
+                <span class="dot4" onclick="currentSlide(4)"></span>
             </div>
         </div>
         <!-- end of remix for https://www.w3schools.com/howto/howto_js_tabs.asp and https://www.w3schools.com/howto/howto_js_slideshow.asp -->
