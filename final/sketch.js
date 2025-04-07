@@ -70,20 +70,15 @@ function openCity(evt, c) {
 }
 
 function preload() {
-    robotModel = loadModel('robot.obj', true, handleModel);
-    spaceshipModel = loadModel('spaceshipblend.obj', true, handleModel);
-    skullModel = loadModel('skullcb.obj', true, handleModel);
-    astronautModel = loadModel('astronautc.obj', true, handleModel);
+    robotModel = loadModel('robot.obj', true);
+    spaceshipModel = loadModel('spaceshipblend.obj', true);
+    skullModel = loadModel('skullcb.obj', true);
+    astronautModel = loadModel('astronautc.obj', true);
 
     cityModels[1] = robotModel;
     cityModels[2] = spaceshipModel;
     cityModels[3] = skullModel;
     cityModels[4] = astronautModel;
-}
-
-function handleModel(data) {
-  data.flipU();
-  data.flipV();
 }
 
 function setup(){
@@ -187,6 +182,7 @@ function draw(){
     noStroke();
     specularMaterial(50);
     shininess(100);
+    rotateX(HALF_PI);
     rotateY(frameCount * 0.01);
     model(cityModels[cityIndex]);
 }
