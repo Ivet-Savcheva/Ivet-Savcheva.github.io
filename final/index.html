@@ -134,61 +134,6 @@
                 to {opacity: 1}
             }
         </style>
-        <script> /*slides script modified to hold butterfly names as desired*/
-            let slideIndex = 1;
-            let cityIndex = 1;
-
-            // Next/previous controls
-            function plusSlides(n) {
-                showSlides(slideIndex += n);
-            }
-
-            // Thumbnail image controls
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
-
-            function showSlides(n) {
-                let i;
-                let slides = document.getElementsByClassName("mySlides" + cityIndex);
-                let dots = document.getElementsByClassName("dot" + cityIndex);
-                if (n > slides.length) {
-                    slideIndex = 1
-                }
-                if (n < 1) {
-                    slideIndex = slides.length
-                }
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = "none";
-                }
-                for (i = 0; i < dots.length; i++) {
-                    dots[i].className = dots[i].className.replace(" active", "");
-                }
-                slides[slideIndex-1].style.display = "block";
-                dots[slideIndex-1].className += " active";
-            }
-
-            // code for multiple slideshows
-            let cityNames = ["", "robot", "spaceship", "skull", "astronaut"];
-
-            function openCity(evt, c) {
-                var i, tabcontent, tablinks;
-                tabcontent = document.getElementsByClassName("tabcontent");
-                for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                }
-                tablinks = document.getElementsByClassName("tablinks");
-                for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                }
-                document.getElementById(cityNames[c]).style.display = "block";
-                evt.currentTarget.className += " active";
-
-                cityIndex = c;
-                slideIndex = 1;
-                showSlides(slideIndex);
-            } 
-        </script>
     </head>
     <body style="margin: 0px;">
         <!-- changed the colour of the background of the body -->
@@ -252,7 +197,7 @@
             
                 <div class="mySlides2 fade">
                     <div class="numbertext">2 / 3</div>
-                    <img src="spaceshipblend.jpg" style="width:100%">
+                    <div id="spaceshipdiv" style="width: auto; height: 600px; align-items: center; display: flex; justify-content: center;"></div>
                     <div class="text">American Lady</div>
                 </div>
             
@@ -285,7 +230,7 @@
             
                 <div class="mySlides3 fade">
                     <div class="numbertext">2 / 2</div>
-                    <img src="skullcb.jpg" style="width:100%">
+                    <div id="skulldiv" style="width: auto; height: 600px; align-items: center; display: flex; justify-content: center;"></div>
                     <div class="text">Red Spotted-Purple butterfly</div>
                 </div>
             
@@ -318,7 +263,7 @@
             
                 <div class="mySlides4 fade">
                     <div class="numbertext">2 / 2</div>
-                    <img src="astronautc.jpg" style="width:100%">
+                    <div id="astronautdiv" style="width: auto; height: 600px; align-items: center; display: flex; justify-content: center;"></div>
                     <div class="text">Hackberry Emperor Butterfly</div>
                 </div>
             
@@ -336,12 +281,8 @@
         </div>
         <!-- end of remix for https://www.w3schools.com/howto/howto_js_tabs.asp and https://www.w3schools.com/howto/howto_js_slideshow.asp -->
 
-        <script>
-            showSlides(1);
-        </script>
+        <div id="hiddendiv" style="width: 1px; height: 1px; overflow: hidden;"></div>
 
         <script src="sketch.js"></script>
-
-        <div id="hiddendiv" style="width: 1px; height: 1px; overflow: hidden;"></div>
     </body>
 </html>
